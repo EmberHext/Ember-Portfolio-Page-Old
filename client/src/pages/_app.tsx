@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar';
 import About from '@/components/About';
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
+import Portfolio from '@/components/Portfolio';
 
 export default function App({ Component, pageProps }: AppProps) {
   return ( 
@@ -10,6 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
           <Navbar />
           <Hero />
           <About />
+          <Portfolio />
         </>
   );
 }

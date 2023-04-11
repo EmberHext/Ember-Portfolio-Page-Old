@@ -10,10 +10,18 @@ export default function App({ Component, pageProps }: AppProps) {
   return ( 
         <>
           <Navbar />
-          <Hero />
-          <About />
-          <Portfolio />
-          <ContactForm />
+          <section id="hero">
+            <Hero />
+          </section>
+          <section id="about">
+            <About />
+          </section>
+          <section id="portfolio">
+            <Portfolio />
+          </section>
+          <section id="contact">
+            <ContactForm />
+          </section>
         </>
   );
 }

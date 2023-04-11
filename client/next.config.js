@@ -4,3 +4,19 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+
+module.exports = {
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'scroll-behavior',
+            value: 'smooth',
+          },
+        ],
+      },
+    ];
+  },
+};

@@ -24,9 +24,9 @@ const Portfolio: React.FC = () => {
                 key={project.id}
                 onMouseEnter={() => handleProjectHover(project.img)}
                 onClick={() => handleProjectHover(project.img)}
-                className="cursor-pointer hover:text-red-500"
+                className="cursor-pointer"
               >
-                <span className="block px-4 py-2 bg-white text-black rounded-md">{project.title}</span>
+                <span className="block px-4 py-2 bg-white hover:bg-black font-bold hover:text-red-500 text-black rounded-md">{project.title}</span>
               </li>
             ))}
           </ul>

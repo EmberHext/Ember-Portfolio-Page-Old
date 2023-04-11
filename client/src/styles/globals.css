@@ -14,6 +14,12 @@ body {
   background-size: cover;
 }
 
+:root {
+  --red: rgb(235, 0, 0);
+  --darkred: rgb(175, 0, 0);
+  --lightred: rgb(255, 50, 50);
+}
+
 .icon-container img {
   transition: opacity 0.3s;
 }

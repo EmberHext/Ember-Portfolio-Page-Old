@@ -14,6 +14,23 @@ body {
   background-size: cover;
 }
 
+.icon-container img {
+  transition: opacity 0.3s;
+}
+
+.icon-container:hover img {
+  opacity: 0.6;
+}
+
+.icon-container img:hover {
+  opacity: 1;
+}
+
+.icon-continer:hover .tooltip {
+  --rt-color-dark: #000;
+  --rt-opacity: 1.0;
+}
+
 /* Hide horizontal scrollbar */
 body {
   overflow-x: hidden;

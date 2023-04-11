@@ -58,7 +58,7 @@ const Hero: React.FC = () => {
         </h1>
       </div>
       <div className="text-white text-5xl font-semibold mt-4">Developer</div>
-      <div className="flex space-x-4 mt-4">
+      <div className="flex space-x-4 mt-4">S
         <a
           href="https://twitter.com/emberhext"
           target="_blank"

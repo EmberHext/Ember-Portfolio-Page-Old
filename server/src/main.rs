@@ -1,29 +1,36 @@
-use axum::{routing::get, Router};
+mod error;
+mod person;
+
+use axum::routing::{delete, get, post, put};
+use axum::{Router, Server};
 use std::net::SocketAddr;
+use surrealdb::engine::remote::ws::Ws;
+use surrealdb::opt::auth::Root;
+use surrealdb::Surreal;
 
 #[tokio::main]
-async fn main() {
-    // Route all requests on "/" endpoint to anonymous handler.
-    //
-    // A handler is an async function which returns something that implements
-    // `axum::response::IntoResponse`.
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+	let db = Surreal::new::<Ws>("localhost:8000").await?;
 
-    // A closure or a function can be used as handler.
+	db.signin(Root {
+		username: "root",
+		password: "root",
+	})
+	.await?;
 
-    let app = Router::new().route("/", get(handler));
-    //        Router::new().route("/", get(|| async { "Hello, world!" }));
+	db.use_ns("namespace").use_db("database").await?;
 
-    // Address that server will bind to.
-    let addr = SocketAddr::from(([127, 0, 0, 1], 4000));
+	let app = Router::new()
+		.route("/person/:id", post(person::create))
+		.route("/person/:id", get(person::read))
+		.route("/person/:id", put(person::update))
+		.route("/person/:id", delete(person::delete))
+		.route("/people", get(person::list))
+		.with_state(db);
 
-    // Use `hyper::server::Server` which is re-exported through `axum::Server` to serve the app.
-    axum::Server::bind(&addr)
-        // Hyper server takes a make service.
-        .serve(app.into_make_service())
-        .await
-        .unwrap();
-}
+	let addr = SocketAddr::from(([127, 0, 0, 1], 8080));
 
-async fn handler() -> &'static str {
-    "Hello, world!"
+	Server::bind(&addr).serve(app.into_make_service()).await?;
+
+	Ok(())
 }

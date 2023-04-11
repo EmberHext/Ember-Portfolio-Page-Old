@@ -25,7 +25,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <section id="contact" className="w-screen h-screen bg-black bg-opacity-75 text-white flex items-center justify-center">
-      <div className="container mx-auto px-4 md:px-8 max-w-5xl">
+      <div className="container mx-auto px-4 md:px-8 max-w-5xl relative z-10">
         <h2 className="text-3xl font-bold mb-8">Get in touch</h2>
         <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col">

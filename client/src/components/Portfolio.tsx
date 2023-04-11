@@ -16,7 +16,7 @@ const Portfolio: React.FC = () => {
   return (
     <section id="portfolio" className="w-screen h-screen bg-black bg-opacity-75 text-white flex items-center justify-center">
       <div className="container mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-4 gap-8 max-w-6xl">
-        <div className="col-span-2">
+        <div className="col-span-2 relative z-10">
           <h2 className="text-3xl font-bold mb-4">Portfolio</h2>
           <ul className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {projects.map((project) => (
@@ -31,7 +31,7 @@ const Portfolio: React.FC = () => {
           ))}
           </ul>
         </div>
-        <div className="col-span-2">
+        <div className="col-span-2 relative z-10">
           <img src={currentImage} alt="Project preview" className="w-full h-auto sm:max-w-md md:max-w-lg lg:max-w-2xl sm:max-h-64 md:max-h-96 lg:max-h-128 mx-auto rounded-md" />
         </div>
       </div>

@@ -3,9 +3,9 @@ import Tooltip from '@mui/material/Tooltip';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="w-screen h-screen bg-black bg-opacity-75 text-white flex items-center justify-center">
+    <div className="w-screen h-screen bg-black bg-opacity-75 text-white flex items-center justify-center">
       <div className="container mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl md:max-w-6xl lg:max-w-7xl">
-        <div className="text-center md:text-left bg-black text-white border-2 border-red-500 rounded-lg p-8">
+        <div className="text-center md:text-left bg-black relative z-10 text-white border-2 border-red-500 rounded-lg p-8">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:p-2 md:p-4 lg:p-6 text-center">About</h2>
           <p className="text-sm md:text-base lg:text-xl sm:p-2 md:p-4 lg:p-6">
             I do full-stack web development and app development using a range of TypeScript and Rust frameworks and technologies.
@@ -17,7 +17,7 @@ const About: React.FC = () => {
             I'm also working on my own indie Unreal Engine game as a hobby.
           </p>
         </div>
-        <div className="w-full md:w-auto flex flex-wrap bg-black text-white border-2 border-red-500 rounded-lg p-8 justify-center">
+        <div className="w-full md:w-auto flex flex-wrap bg-black relative z-10 text-white border-2 border-red-500 rounded-lg p-8 justify-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:p-2 md:p-4 lg:p-6">Technologies</h2>
           <div className="grid grid-cols-5 gap-1 icon-container">
             <Tooltip title="TypeScript">
@@ -83,7 +83,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

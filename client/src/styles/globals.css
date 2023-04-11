@@ -20,6 +20,10 @@ body {
   --lightred: rgb(255, 50, 50);
 }
 
+canvas {
+  text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red;
+}
+
 .icon-container img {
   transition: opacity 0.3s;
 }

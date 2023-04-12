@@ -16,6 +16,9 @@ const About: React.FC = () => {
           <p className="text-sm md:text-base lg:text-xl sm:p-2 md:p-4 lg:p-6">
             I'm also working on my own indie Unreal Engine game as a hobby.
           </p>
+          <p className="text-sm md:text-base lg:text-xl sm:p-2 md:p-4 lg:p-6">
+            My biggest strength as a programmer is knowing there's nothing I can't do; there's only things I haven't done yet.
+          </p>
         </div>
         <div className="w-full md:w-auto flex flex-wrap bg-black relative z-10 text-white border-2 border-red-500 rounded-lg p-8 justify-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:p-2 md:p-4 lg:p-6">Technologies</h2>

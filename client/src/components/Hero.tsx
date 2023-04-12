@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
           clearInterval(interval! as number);
         }
 
-        iteration += 1 / 3;
+        iteration += 1 / 5;
       }, 30);
     };
 

@@ -36,7 +36,7 @@ const BinaryRain: React.FC = () => {
         ctx.fillRect(0, 0, canvas.width, canvas.height);
       
         // Probability threshold for spawning a new column
-        const spawnThreshold = 0.004;
+        const spawnThreshold = 0.0035;
       
         for (let i = 0; i < drops.length; i++) {
           // Check if the current column is inactive and if a new column should spawn
@@ -58,7 +58,7 @@ const BinaryRain: React.FC = () => {
       
             ctx.font = '14px monospace';
             // Draw the original white text
-            ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
             ctx.fillText(text, i * 10, drops[i] * 14);
       
             // If the current column has reached the bottom, mark it as inactive

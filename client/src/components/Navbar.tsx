@@ -30,7 +30,7 @@
           isVisible ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
+        <nav className="container mx-auto px-2 py-2 lg:px-4 lg:py-4 flex items-center justify-between">
           <div className="text-xl font-bold">
             <span className="text-white hover:text-red-500 font-fira">        
               <Link scroll={false} href="/#hero" className="cursor-pointer text-white hover:text-red-500" >
@@ -38,7 +38,7 @@
               </Link>
             </span>
           </div>
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 lg:space-x-4">
           <Link scroll={false} href="/#about" className="cursor-pointer text-white hover:text-red-500" >
             About
           </Link>

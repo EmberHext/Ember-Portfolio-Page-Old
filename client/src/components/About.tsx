@@ -8,13 +8,10 @@ const About: React.FC = () => {
         <div className="text-center md:text-left bg-black relative z-10 text-white border-2 border-red-500 rounded-lg p-8">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:p-2 md:p-4 lg:p-6 text-center">About</h2>
           <p className="text-sm md:text-base lg:text-xl sm:p-2 md:p-4 lg:p-6">
-            I do full-stack web development and app development using a range of TypeScript and Rust frameworks and technologies.
+            As a full-stack web and app developer, I work with various TypeScript and Rust frameworks and technologies. I also have a strong interest in cybersecurity, tinkering, hacking, physical security, and philosophy.
           </p>
           <p className="text-sm md:text-base lg:text-xl sm:p-2 md:p-4 lg:p-6">
-            In addition to programming, I have a passion for cybersecurity, tinkering and hacking, physical security, and philosophy.
-          </p>
-          <p className="text-sm md:text-base lg:text-xl sm:p-2 md:p-4 lg:p-6">
-            I'm also working on my own indie Unreal Engine game as a hobby.
+            In my free time, I have a personal passion project in the form of an indie game developed with Unreal Engine.
           </p>
           <p className="text-sm md:text-base lg:text-xl sm:p-2 md:p-4 lg:p-6">
             My biggest strength as a programmer is knowing there's nothing I can't do; there's only things I haven't done yet.
